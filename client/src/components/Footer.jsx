@@ -62,7 +62,7 @@ const Footer = () => {
             <div>
               <div className="text-xs m-2">Need Help? Call Us</div>
               <div className="flex items-center gap-2">
-                <span className="bg-yellow-400 w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                <span className="bg-green-400 w-8 h-8 rounded-full flex items-center justify-center mr-2">
                   <MdPhone className="text-white" />
                 </span>
                 <a href="tel:+918123096298" className="font-bold">+918123096298</a>
