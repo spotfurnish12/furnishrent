@@ -130,8 +130,8 @@ const ContactPage = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-800 mb-1">Email Us</h3>
-                  <p className="text-gray-600 mb-1">Customer Support: infospotfurnish@gmail.com</p>
-                  <p className="text-gray-600">info@spotfurnish.com</p>
+                  <p className="text-gray-600 mb-1">Customer Support: contact@spotfurnish.com</p>
+                  
                 </div>
               </div>
               
