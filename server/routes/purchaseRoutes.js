@@ -193,9 +193,12 @@ router.post("/process-purchase", async (req, res) => {
     doc.font('Helvetica')
       .fontSize(12)
       .fillColor(blackColor)
-      .text('8th Main, Ramamurthy Nagar main Road', marginLeft, yPos)
-      .text('Bengaluru, Karnataka 560016', marginLeft, yPos + lineHeight)
-      .text('+91 8123096928', marginLeft, yPos + lineHeight * 2)
+      .text('Spot Furnish Rentals', marginLeft, yPos)
+      .text('8th Main, Sonnappa Layout', marginLeft, yPos)
+      .text('Ramamurty Nagar Main Road,', marginLeft, yPos + lineHeight)
+      .text('Bangalore 560016,', marginLeft, yPos + lineHeight)
+      .text('Landmark- Appana Bazar line,', marginLeft, yPos + lineHeight)
+      .text('+91 8123096298', marginLeft, yPos + lineHeight * 2)
       .text('+91 9844723432', marginLeft, yPos + lineHeight * 3);
 
     // Add quotation title
@@ -691,7 +694,7 @@ router.post("/process-purchase", async (req, res) => {
 
         // Create dynamic email content
         const productList = products.map(product => 
-          `<li><strong>${product.name}</strong> - ₹${product.price} x ${product.quantity} = ₹${product.price * product.quantity}</li>`
+          `<li><strong>${product.name}</strong>`
         ).join("");
 
         // Email Content
@@ -705,7 +708,7 @@ router.post("/process-purchase", async (req, res) => {
           <p>Kindly refer to attached quotation for all the details .</p>
           <p><strong>Total Monthly Package:</strong> ₹${monthlyTotal}</p>
           <p>To confirm your order, please pay ₹1000 as token advance to the  Gpay/ Phone pay number 984472342.</p>
-          <p>If you have any questions, please contact us at +91 8123096928 or +91 9844723432.</p>
+          <p>If you have any questions, please contact us at +91 8123096298 or +91 9844723432.</p>
         `;
 
         // Send Invoice to Customer

@@ -19,7 +19,7 @@ const PaymentPage = () => {
   const auth = getAuth();
  
 
-  const adminEmail = "pragarajesh779jd@gmail.com";
+  const adminEmail = "spotfurnish@gmail.com";
 
   // Fetch cart data
   const fetchCartData = async (uid) => {

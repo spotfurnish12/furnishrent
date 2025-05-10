@@ -66,13 +66,7 @@ const Testimonials = () => {
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center mb-6">
-                  <div className="mr-4">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name}
-                      className="w-14 h-14 rounded-full object-cover"
-                    />
-                  </div>
+                  
                   <div>
                     <h4 className="font-semibold text-lg">{testimonial.name}</h4>
                     <p className="text-gray-500 text-sm">{testimonial.role}</p>

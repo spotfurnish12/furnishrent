@@ -21,7 +21,7 @@ const CartPage = () => {
   const navigate = useNavigate();
   const DELIVERY_CHARGE = 750; 
 
-  const adminEmail = "pragarajesh779jd@gmail.com";
+  const adminEmail = "spotfurnish@gmail.com";
 
   // Using all existing logic
   const fetchCart = async (initial = false) => {
