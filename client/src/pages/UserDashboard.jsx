@@ -57,7 +57,7 @@ const UserDashboard = () => {
                 <td className="p-2">{order.invoiceNumber}</td>
                 <td className="p-2">{new Date(order.orderDate).toLocaleDateString()}</td>
                 
-                <td className="p-2">${order.totalAmount.toFixed(2)}</td>
+                <td className="p-2">₹{order.totalAmount.toFixed(2)}</td>
                 <td className="p-2">{order.status}</td>
               </tr>
             ))}
