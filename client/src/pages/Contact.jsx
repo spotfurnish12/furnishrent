@@ -108,6 +108,23 @@ const ContactPage = () => {
             <p className="text-gray-600">Bangalore 560016</p>
             <p className="text-gray-600">Landmark- Appana Bazar line</p>
           </div>
+          
+        </div>
+        <div className="flex items-start">
+         <div className="flex-shrink-0 bg-green-500 p-3 rounded-full">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+        <div className="ml-4">
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">Visit Our Stores</h3>
+            <p className="text-gray-600">Spot Furnish Rentals</p>
+            <p className="text-gray-600">Saint tukuram complex,</p>
+            <p className="text-gray-600">Opposite to D Mart,</p>
+            <p className="text-gray-600">Hingewadi 560016</p>
+            <p className="text-gray-600">Pune - 411057</p>
+          </div>
         </div>
         
         {/* Call Us */}

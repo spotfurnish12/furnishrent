@@ -18,15 +18,18 @@ const FeaturedProducts = ({featuredProducts}) => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-display font-bold">Featured Products</h2>
-        <button 
-          className="text-green-600 hover:text-green-800 transition-colors text-sm font-medium"
-          onClick={() => navigate('/category')}
-        >
-          View All Products →
-        </button>
-      </div>
+     <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between mb-4 sm:mb-6 md:mb-8 px-2">
+  <h2 className="text-2xl md:text-3xl font-display font-bold mb-2 sm:mb-0">Featured Products</h2>
+  <button 
+    className="text-green-600 hover:text-green-800 transition-colors text-sm md:text-base font-medium flex items-center"
+    onClick={() => navigate('/category')}
+  >
+    <span>View All Products</span>
+    <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    </svg>
+  </button>
+</div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {featuredProducts.map((product) => (

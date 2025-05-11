@@ -368,9 +368,7 @@ const CartPage = () => {
                 After delivery of the items, monthly payable will be deducted
               </p>
               
-              <div className="bg-green-100 text-green-800 font-medium py-2 px-4 rounded text-center mb-4">
-                Pay Now
-              </div>
+              <hr className='mb-4 text-gray-400'></hr>
               
               <div className="space-y-3 mb-8">
                 <div className="flex justify-between">
