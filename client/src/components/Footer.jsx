@@ -17,7 +17,7 @@ const Footer = () => {
                 className="h-12 sm:h-16 mb-3 sm:mb-0 sm:mr-4"
               />
               <span className="text-xs sm:text-sm text-center sm:text-left">
-                © {new Date().getFullYear()}, All Rights Reserved FURNISH RENT.
+                © {new Date().getFullYear()}, All Rights Reserved SPOT FURNISH.
               </span>
             </div>
           </div>
@@ -46,7 +46,8 @@ const Footer = () => {
               {/* Social Icons */}
               <div className="flex space-x-3">
                 <a 
-                  href="#" 
+                  href="https://www.facebook.com/spot.furnish/" 
+                  target="_blank"
                   className="w-8 h-8 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition duration-300"
                   aria-label="Facebook"
                 >
@@ -66,9 +67,7 @@ const Footer = () => {
                 <div className="text-xs mb-1">Need Help? Call Us</div>
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
                   <div className="flex items-center">
-                    <span className="bg-green-400 w-7 h-7 rounded-full flex items-center justify-center mr-2">
-                      <MdPhone className="text-white" />
-                    </span>
+                    
                     <a href="tel:+918123096298" className="text-sm font-bold hover:underline">+918123096298</a>
                   </div>
                   <a href="tel:+919844723432" className="text-sm font-bold hover:underline">+919844723432</a>

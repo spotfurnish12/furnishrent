@@ -37,12 +37,12 @@ const Testimonials = () => {
         },
         {
           id: 3,
-          name: "Rohan Mehta",
+          name: "Pavan Kulkarni",
           role: "Architect",
           image: "/pers.png", // 
       
       
-          text: "I’ve partnered with Spot Furnish on several projects. The furniture not only elevates the space but also arrives on schedule. Their customer support is top-notch—truly a pleasure to work with.",
+          text: "Awesome service from Spot Furnish They helped me set up a fully furnished bachelor pad with stylish and comfortable furniture on rent. The furniture looks great, and it's perfect for a bachelor lifestyle. Highly recommend for anyone looking for convenient and affordable rental furniture",
         }
       ];
       

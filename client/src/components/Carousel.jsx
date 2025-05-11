@@ -84,10 +84,10 @@ const Carousel = () => {
   // Show loading state
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center h-screen max-h-[600px] bg-gray-100">
+      <div className="flex items-center justify-center h-64 md:h-96 lg:max-h-[500px] bg-gray-100 mx-2 md:mx-4 rounded-lg">
         <div className="text-center">
-          <div className="inline-block w-10 h-10 border-4 border-gray-300 border-t-green-600 rounded-full animate-spin mb-4"></div>
-          <p className="text-gray-600 text-lg">Loading carousel...</p>
+          <div className="inline-block w-8 h-8 border-3 border-gray-300 border-t-green-600 rounded-full animate-spin mb-3"></div>
+          <p className="text-gray-600 text-base">Loading carousel...</p>
         </div>
       </div>
     );
@@ -96,12 +96,12 @@ const Carousel = () => {
   // Show error state
   if (error) {
     return (
-      <div className="flex items-center justify-center h-screen max-h-[600px] bg-gray-100">
+      <div className="flex items-center justify-center h-64 md:h-96 lg:max-h-[500px] bg-gray-100 mx-2 md:mx-4 rounded-lg">
         <div className="text-center">
-          <p className="text-red-500 mb-4 text-lg">{error}</p>
+          <p className="text-red-500 mb-3 text-base">{error}</p>
           <button 
             onClick={fetchCarouselItems} 
-            className="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors shadow-md"
+            className="px-4 py-2 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors shadow-md"
           >
             Retry
           </button>
@@ -112,7 +112,7 @@ const Carousel = () => {
 
   // Render carousel
   return (
-    <div className="relative w-full overflow-hidden h-screen max-h-[600px] bg-gray-900 rounded-xl shadow-2xl">
+    <div className="relative w-full overflow-hidden h-64 md:h-96 lg:max-h-[500px] bg-gray-900 rounded-xl shadow-xl mx-2 md:mx-4 my-2">
       {/* Main carousel */}
       <div className="relative h-full">
         {displayItems.map((item, index) => (
@@ -131,51 +131,50 @@ const Carousel = () => {
               className="w-full h-full object-cover"
             />
             
-            <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4">
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-3">
               <div className="text-center max-w-4xl">
-                <h2 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">
+                <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 text-white drop-shadow-lg">
                   {item.title}
                 </h2>
-                <p className="text-2xl text-white mb-8 drop-shadow-md opacity-90">
+                <p className="text-sm md:text-lg lg:text-xl text-white mb-4 md:mb-6 drop-shadow-md opacity-90">
                   {item.subtitle}
                 </p>
-                
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Navigation arrows - redesigned */}
+      {/* Navigation arrows - smaller for mobile */}
       <button 
         onClick={goToPrevious}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full p-4 z-30 transition-all hover:scale-110 shadow-lg"
+        className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full p-2 md:p-3 z-30 transition-all hover:scale-110 shadow-md"
         aria-label="Previous slide"
       >
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
       
       <button 
         onClick={goToNext}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full p-4 z-30 transition-all hover:scale-110 shadow-lg"
+        className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full p-2 md:p-3 z-30 transition-all hover:scale-110 shadow-md"
         aria-label="Next slide"
       >
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
-      {/* Dots indicator - redesigned */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-3 z-30">
+      {/* Dots indicator - smaller for mobile */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-30">
         {displayItems.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
               index === currentIndex 
-                ? 'bg-gradient-to-r from-green-500 to-emerald-500 scale-125 shadow-md' 
+                ? 'bg-gradient-to-r from-green-500 to-emerald-500 scale-110 shadow-md' 
                 : 'bg-gray-300 hover:bg-gray-100'
             }`}
             aria-label={`Go to slide ${index + 1}`}
