@@ -190,11 +190,6 @@ Images uploaded via API are stored in Cloudinary using `upload.js` middleware. C
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of the home page, product details, cart, and admin dashboard here
-
----
 
 ## 🤝 Contributing
 
